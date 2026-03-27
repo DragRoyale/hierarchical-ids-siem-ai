@@ -46,18 +46,59 @@ This design enables **conditional execution**, improving both:
 ---
 
 ## ⚙️ Project Structure
+siem-ai-q1/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
 ├── src/
-│ ├── train_stage1.py # Binary classifier
-│ ├── train_stage2.py # Multi-class classifier
-│ ├── preprocessing.py # Data preprocessing
+│   ├── data/
+│   │   ├── extract_unsw_per_class.py
+│   │   ├── check.py
+│   │
+│   ├── training/
+│   │   ├── train_catboost_cv.py
+│   │   ├── train_cicids_gpu.py
+│   │   ├── train_cicids_stage2.py
+│   │   ├── train_siem_single_stage.py
+│   │   ├── train_siem_repeated.py
+│   │
+│   ├── evaluation/
+│   │   ├── stat_test_unsw.py
+│   │   ├── stat_test_by_stage.py
+│   │   ├── stat_siem_significance.py
+│   │   ├── per_class_analysis.py
+│   │
+│   ├── visualization/
+│   │   ├── plot_unsw_cv_mean.py
+│   │   ├── plot_unsw_cv_learning_curve.py
+│   │
+│   ├── utils/
+│   │   ├── cpu.py
 │
 ├── results/
-│ ├── figures/ # Plots (ROC, confusion matrices)
-│ └── tables/ # Result summaries
+│   ├── figures/
+│   │   ├── binary_class_confusion.png
+│   │   ├── roc_curve.png
+│   │   ├── confusion_matrix_stage2.png
+│   │   ├── loss.png
+│   │   ├── by_epoch.png
+│   │
+│   ├── tables/
+│   │   ├── unsw_cv_results.csv
+│   │   ├── runtime_benchmark.csv
+│   │
+│   ├── arrays/
+│       ├── *.npy
 │
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── models/   ❗ (NEW FOLDER)
+│   ├── *.joblib
+│
+├── notebooks/ (optional)
+│
+└── paper/
+    ├── figures/ (copy final figures used in paper)
 
 ▶️ How to Run
 1. Train Stage 1 (Binary)
