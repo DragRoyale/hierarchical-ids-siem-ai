@@ -46,9 +46,9 @@ This design enables **conditional execution**, improving both:
 ---
 
 ## ⚙️ Project Structure
-- src/ → core implementation
-- results/ → figures and outputs used in paper
-- models/ → trained models
+src/ → core implementation
+results/ → figures and outputs used in paper
+models/ → trained models
 
 ▶️ How to Run
 1. Train Stage 1 (Binary)
