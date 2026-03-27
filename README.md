@@ -47,7 +47,9 @@ This design enables **conditional execution**, improving both:
 
 ## ⚙️ Project Structure
 src/ → core implementation
+
 results/ → figures and outputs used in paper
+
 models/ → trained models
 
 ▶️ How to Run
@@ -67,6 +69,7 @@ SIEM-like dataset (private)
 Download links:
 
 UNSW-NB15: https://research.unsw.edu.au/projects/unsw-nb15-dataset
+
 CICIDS2017: https://www.unb.ca/cic/datasets/ids-2017.html
 
 📄 Paper
