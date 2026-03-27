@@ -35,13 +35,17 @@ This design enables **conditional execution**, improving both:
 ---
 
 ## 📊 Results Summary
-| Dataset | Stage | Metric | Result |
-|--------|------|--------|--------|
-| UNSW-NB15 | Cross-validation | Macro-F1 | ↑ Improvement |
-| SIEM-like | 25 runs | Macro-F1 | 0.8488 → **0.8752** |
-| CICIDS2017 | Stage 1 | Macro-F1 | **0.9887** |
-| CICIDS2017 | Stage 2 | Macro-F1 | **0.8163** |
-| Runtime | Throughput | Speed | up to **2.38× faster** |
+| Dataset | Setting | Model | Macro-F1 |
+|--------|--------|------|--------|
+| UNSW-NB15 | Cross-validation | Single-stage | 0.5958 |
+| UNSW-NB15 | Cross-validation | Two-stage | **0.6476** |
+| UNSW-NB15 | Official split | Single-stage | **0.2397** |
+| UNSW-NB15 | Official split | Two-stage | 0.1581 |
+| SIEM-like | 25 runs | Single-stage | 0.8488 |
+| SIEM-like | 25 runs | Two-stage | **0.8752** |
+| CICIDS2017 | Stage 1 (Binary) | — | **0.9887** |
+| CICIDS2017 | Stage 2 (Multi-class) | — | **0.8163** |
+| Runtime | Throughput | Two-stage vs Single | **2.38× faster** |
 
 ---
 
